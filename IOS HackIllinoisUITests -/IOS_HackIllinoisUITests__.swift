@@ -1,13 +1,13 @@
 //
-//  IOS_HackIllinoisUITests.swift
-//  IOS HackIllinoisUITests
+//  IOS_HackIllinoisUITests__.swift
+//  IOS HackIllinoisUITests -
 //
 //  Created by Nicole Hu on 9/15/24.
 //
-//
+
 import XCTest
 
-final class IOS_HackIllinoisUITests: XCTestCase {
+final class IOS_HackIllinoisUITests__: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -39,4 +39,3 @@ final class IOS_HackIllinoisUITests: XCTestCase {
         }
     }
 }
-

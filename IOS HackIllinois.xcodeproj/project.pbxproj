@@ -14,6 +14,8 @@
 		DAC0EE922C9758AB0060389B /* IOS_HackIllinoisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC0EE912C9758AB0060389B /* IOS_HackIllinoisTests.swift */; };
 		DAC0EE9C2C9758AB0060389B /* IOS_HackIllinoisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC0EE9B2C9758AB0060389B /* IOS_HackIllinoisUITests.swift */; };
 		DAC0EE9E2C9758AB0060389B /* IOS_HackIllinoisUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC0EE9D2C9758AB0060389B /* IOS_HackIllinoisUITestsLaunchTests.swift */; };
+		DAC0EEB52C9766990060389B /* IOS_HackIllinoisUITests__.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC0EEB42C9766990060389B /* IOS_HackIllinoisUITests__.swift */; };
+		DAC0EEB72C9766990060389B /* IOS_HackIllinoisUITests__LaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC0EEB62C9766990060389B /* IOS_HackIllinoisUITests__LaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,13 @@
 			remoteInfo = "IOS HackIllinois";
 		};
 		DAC0EE982C9758AB0060389B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAC0EE752C9758A90060389B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAC0EE7C2C9758A90060389B;
+			remoteInfo = "IOS HackIllinois";
+		};
+		DAC0EEB82C9766990060389B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DAC0EE752C9758A90060389B /* Project object */;
 			proxyType = 1;
@@ -44,6 +53,9 @@
 		DAC0EE972C9758AB0060389B /* IOS HackIllinoisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS HackIllinoisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC0EE9B2C9758AB0060389B /* IOS_HackIllinoisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_HackIllinoisUITests.swift; sourceTree = "<group>"; };
 		DAC0EE9D2C9758AB0060389B /* IOS_HackIllinoisUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_HackIllinoisUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DAC0EEB22C9766990060389B /* IOS HackIllinoisUITests -.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS HackIllinoisUITests -.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAC0EEB42C9766990060389B /* IOS_HackIllinoisUITests__.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_HackIllinoisUITests__.swift; sourceTree = "<group>"; };
+		DAC0EEB62C9766990060389B /* IOS_HackIllinoisUITests__LaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_HackIllinoisUITests__LaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DAC0EEAF2C9766990060389B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +96,7 @@
 				DAC0EE7F2C9758A90060389B /* IOS HackIllinois */,
 				DAC0EE902C9758AB0060389B /* IOS HackIllinoisTests */,
 				DAC0EE9A2C9758AB0060389B /* IOS HackIllinoisUITests */,
+				DAC0EEB32C9766990060389B /* IOS HackIllinoisUITests - */,
 				DAC0EE7E2C9758A90060389B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,6 +107,7 @@
 				DAC0EE7D2C9758A90060389B /* IOS HackIllinois.app */,
 				DAC0EE8D2C9758AB0060389B /* IOS HackIllinoisTests.xctest */,
 				DAC0EE972C9758AB0060389B /* IOS HackIllinoisUITests.xctest */,
+				DAC0EEB22C9766990060389B /* IOS HackIllinoisUITests -.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +146,15 @@
 				DAC0EE9D2C9758AB0060389B /* IOS_HackIllinoisUITestsLaunchTests.swift */,
 			);
 			path = "IOS HackIllinoisUITests";
+			sourceTree = "<group>";
+		};
+		DAC0EEB32C9766990060389B /* IOS HackIllinoisUITests - */ = {
+			isa = PBXGroup;
+			children = (
+				DAC0EEB42C9766990060389B /* IOS_HackIllinoisUITests__.swift */,
+				DAC0EEB62C9766990060389B /* IOS_HackIllinoisUITests__LaunchTests.swift */,
+			);
+			path = "IOS HackIllinoisUITests -";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +213,24 @@
 			productReference = DAC0EE972C9758AB0060389B /* IOS HackIllinoisUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		DAC0EEB12C9766990060389B /* IOS HackIllinoisUITests - */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAC0EEBA2C9766990060389B /* Build configuration list for PBXNativeTarget "IOS HackIllinoisUITests -" */;
+			buildPhases = (
+				DAC0EEAE2C9766990060389B /* Sources */,
+				DAC0EEAF2C9766990060389B /* Frameworks */,
+				DAC0EEB02C9766990060389B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAC0EEB92C9766990060389B /* PBXTargetDependency */,
+			);
+			name = "IOS HackIllinoisUITests -";
+			productName = "IOS HackIllinoisUITests -";
+			productReference = DAC0EEB22C9766990060389B /* IOS HackIllinoisUITests -.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -204,6 +252,10 @@
 						CreatedOnToolsVersion = 15.4;
 						TestTargetID = DAC0EE7C2C9758A90060389B;
 					};
+					DAC0EEB12C9766990060389B = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = DAC0EE7C2C9758A90060389B;
+					};
 				};
 			};
 			buildConfigurationList = DAC0EE782C9758A90060389B /* Build configuration list for PBXProject "IOS HackIllinois" */;
@@ -222,6 +274,7 @@
 				DAC0EE7C2C9758A90060389B /* IOS HackIllinois */,
 				DAC0EE8C2C9758AB0060389B /* IOS HackIllinoisTests */,
 				DAC0EE962C9758AB0060389B /* IOS HackIllinoisUITests */,
+				DAC0EEB12C9766990060389B /* IOS HackIllinoisUITests - */,
 			);
 		};
 /* End PBXProject section */
@@ -244,6 +297,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DAC0EE952C9758AB0060389B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC0EEB02C9766990060389B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -279,6 +339,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DAC0EEAE2C9766990060389B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC0EEB72C9766990060389B /* IOS_HackIllinoisUITests__LaunchTests.swift in Sources */,
+				DAC0EEB52C9766990060389B /* IOS_HackIllinoisUITests__.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -291,6 +360,11 @@
 			isa = PBXTargetDependency;
 			target = DAC0EE7C2C9758A90060389B /* IOS HackIllinois */;
 			targetProxy = DAC0EE982C9758AB0060389B /* PBXContainerItemProxy */;
+		};
+		DAC0EEB92C9766990060389B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAC0EE7C2C9758A90060389B /* IOS HackIllinois */;
+			targetProxy = DAC0EEB82C9766990060389B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -422,6 +496,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS HackIllinois/Preview Content\"";
+				DEVELOPMENT_TEAM = 2Z6LM9KZBC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS HackIllinois/Preview Content\"";
+				DEVELOPMENT_TEAM = 2Z6LM9KZBC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -542,6 +618,38 @@
 			};
 			name = Release;
 		};
+		DAC0EEBB2C9766990060389B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "HackIllinois.IOS-HackIllinoisUITests--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "IOS HackIllinois";
+			};
+			name = Debug;
+		};
+		DAC0EEBC2C9766990060389B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "HackIllinois.IOS-HackIllinoisUITests--";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "IOS HackIllinois";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -577,6 +685,15 @@
 			buildConfigurations = (
 				DAC0EEA82C9758AB0060389B /* Debug */,
 				DAC0EEA92C9758AB0060389B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAC0EEBA2C9766990060389B /* Build configuration list for PBXNativeTarget "IOS HackIllinoisUITests -" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAC0EEBB2C9766990060389B /* Debug */,
+				DAC0EEBC2C9766990060389B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
