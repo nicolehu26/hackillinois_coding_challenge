@@ -136,4 +136,13 @@ final class IOS_HackIllinoisTests: XCTestCase {
             }
         }
     }
+    
+    func testLaunchPerformance() throws {
+        if #available(iOS 13.0, *) {
+            measure(metrics: [XCTApplicationLaunchMetric()]) {
+                XCUIApplication().launch()
+            }
+        }
+    }
+
 }

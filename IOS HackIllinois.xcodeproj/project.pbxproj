@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1E2E1D2C988C470085E684 /* EventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E2E1C2C988C470085E684 /* EventRow.swift */; };
+		DA1E2E1F2C988CBA0085E684 /* EventDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E2E1E2C988CBA0085E684 /* EventDetailView.swift */; };
+		DA1E2E212C988CD80085E684 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E2E202C988CD80085E684 /* FavoritesView.swift */; };
+		DA1E2E232C988CFA0085E684 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E2E222C988CFA0085E684 /* MapView.swift */; };
+		DA1E2E252C988D280085E684 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1E2E242C988D280085E684 /* Models.swift */; };
 		DAC0EE812C9758A90060389B /* IOS_HackIllinoisApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC0EE802C9758A90060389B /* IOS_HackIllinoisApp.swift */; };
 		DAC0EE832C9758A90060389B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC0EE822C9758A90060389B /* ContentView.swift */; };
 		DAC0EE852C9758AB0060389B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAC0EE842C9758AB0060389B /* Assets.xcassets */; };
@@ -43,6 +48,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1E2E1C2C988C470085E684 /* EventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventRow.swift; sourceTree = "<group>"; };
+		DA1E2E1E2C988CBA0085E684 /* EventDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailView.swift; sourceTree = "<group>"; };
+		DA1E2E202C988CD80085E684 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		DA1E2E222C988CFA0085E684 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		DA1E2E242C988D280085E684 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		DAC0EE7D2C9758A90060389B /* IOS HackIllinois.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS HackIllinois.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC0EE802C9758A90060389B /* IOS_HackIllinoisApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_HackIllinoisApp.swift; sourceTree = "<group>"; };
 		DAC0EE822C9758A90060389B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +127,11 @@
 			children = (
 				DAC0EE802C9758A90060389B /* IOS_HackIllinoisApp.swift */,
 				DAC0EE822C9758A90060389B /* ContentView.swift */,
+				DA1E2E1C2C988C470085E684 /* EventRow.swift */,
+				DA1E2E1E2C988CBA0085E684 /* EventDetailView.swift */,
+				DA1E2E202C988CD80085E684 /* FavoritesView.swift */,
+				DA1E2E222C988CFA0085E684 /* MapView.swift */,
+				DA1E2E242C988D280085E684 /* Models.swift */,
 				DAC0EE842C9758AB0060389B /* Assets.xcassets */,
 				DAC0EE862C9758AB0060389B /* Preview Content */,
 			);
@@ -317,8 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA1E2E212C988CD80085E684 /* FavoritesView.swift in Sources */,
+				DA1E2E232C988CFA0085E684 /* MapView.swift in Sources */,
+				DA1E2E1F2C988CBA0085E684 /* EventDetailView.swift in Sources */,
 				DAC0EE832C9758A90060389B /* ContentView.swift in Sources */,
+				DA1E2E1D2C988C470085E684 /* EventRow.swift in Sources */,
 				DAC0EE812C9758A90060389B /* IOS_HackIllinoisApp.swift in Sources */,
+				DA1E2E252C988D280085E684 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
