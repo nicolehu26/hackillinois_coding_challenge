@@ -20,11 +20,15 @@ struct FavoritesView: View {
                     .padding()
             } else {
                 List(favoriteEvents) { event in //otherwise display list of events
-                    EventRow(event: event, 
-                             isFavorite: true,
-                             onFavoriteToggle: {
-                            toggleFavorite(event)  // favorite/unfavorite the event
-                            })
+                    NavigationLink(destination: EventDetailView(event: event)) {
+                        EventRow(
+                            event: event,
+                            isFavorite: true,
+                            onFavoriteToggle: {
+                                toggleFavorite(event)  // unfavorite the event
+                            }
+                        )
+                    }
                 }
                 .listStyle(PlainListStyle())
                 .navigationTitle("Favorite Events")
