@@ -6,29 +6,30 @@
 //
 //
 import SwiftUI
-import MapKit
 ///
 
 struct ContentView: View {
+    //@State allows view to modify values of private vars in view
     @State private var events: [Event] = []
     @State private var errorMessage: String?
     @State private var isLoading = true
-    @State private var selectedEvent: Event? = nil // Track the selected event
+    @State private var selectedEvent: Event? = nil // track the selected event
+    //@AppStorage writes data to UserDefaults
     @AppStorage("favoriteEvents") private var favoriteEventIDsString: String = "" // store favorite event IDs as a comma-separated string
 
     var favoriteEventIDs: Set<String> {
-        get {
+        get {  //convert favorite eventIds into set by splitting at commas
             Set(favoriteEventIDsString.split(separator: ",").map { String($0) })
         }
-        set {
+        set { //convert set back to string
             favoriteEventIDsString = newValue.joined(separator: ",")
         }
     }
 
     var body: some View {
-        if UIDevice.current.userInterfaceIdiom == .pad {
+        if UIDevice.current.userInterfaceIdiom == .pad { //ipad view
             // Use NavigationSplitView for iPad to get the sidebar and detail layout
-            NavigationSplitView {
+            NavigationSplitView { //sidebar
                 List(events, selection: $selectedEvent) { event in
                     NavigationLink(value: event) {
                         EventRow(
@@ -43,8 +44,8 @@ struct ContentView: View {
                 .listStyle(PlainListStyle())
                 .navigationTitle("HackIllinois Events")
                 .toolbar {
-                    NavigationLink(destination: FavoritesView(
-                        favoriteEvents: events.filter { favoriteEventIDs.contains($0.id) },
+                    NavigationLink(destination: FavoritesView( //favorites tab
+                        favoriteEvents: events.filter { favoriteEventIDs.contains($0.id) }, //only list events marked as favorites
                         toggleFavorite: toggleFavorite
                     )) {
                         Text("Favorites")
@@ -54,7 +55,7 @@ struct ContentView: View {
                 if let selectedEvent = selectedEvent {
                     EventDetailView(event: selectedEvent)
                 } else {
-                    Text("Select an event to see details")
+                    Text("Select an event to see details") //if no event selected
                         .font(.largeTitle)
                         .foregroundColor(.secondary)
                 }
@@ -63,7 +64,7 @@ struct ContentView: View {
                 fetchEvents()
             }
         } else {
-            // use regular NavigationView for iPhone and smaller devices
+            // use regular NavigationView for iphone, no splitview
             NavigationView {
                 List(events) { event in
                     NavigationLink(destination: EventDetailView(event: event)) {
@@ -96,22 +97,24 @@ struct ContentView: View {
         var favorites = favoriteEventIDs
 
         if favorites.contains(event.id) {
-            favorites.remove(event.id)
+            favorites.remove(event.id) //unfavorite
         } else {
-            favorites.insert(event.id)
+            favorites.insert(event.id) //favorite
         }
 
-        // update the backing AppStorage value directly
+        // update new set of ids in string form
         favoriteEventIDsString = favorites.joined(separator: ",")
     }
 
-    func fetchEvents() {
+    func fetchEvents() { //HTP GET request using HackIllinois API url
+        //url is API endpoint to return event data
         guard let url = URL(string: "https://adonix.hackillinois.org/event/") else {
             errorMessage = "Invalid URL"
             isLoading = false
             return
         }
 
+        //sending get request to url
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 DispatchQueue.main.async {
@@ -120,7 +123,8 @@ struct ContentView: View {
                 }
                 return
             }
-
+            
+           //after request, check if data returned by API
             guard let data = data else {
                 DispatchQueue.main.async {
                     errorMessage = "No data found"
@@ -128,10 +132,11 @@ struct ContentView: View {
                 }
                 return
             }
-
+            //decode data into Swift object into EventContainer, array of event objects
             do {
                 let decodedResponse = try JSONDecoder().decode(EventContainer.self, from: data)
                 DispatchQueue.main.async {
+                    //UI updates must be dispatched back to main threat after data decoded
                     events = decodedResponse.events
                     isLoading = false
                 }

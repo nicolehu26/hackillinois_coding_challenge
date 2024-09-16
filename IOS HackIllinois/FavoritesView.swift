@@ -6,28 +6,25 @@
 //
 
 import SwiftUI
-// MARK: - FavoritesView
 
 struct FavoritesView: View {
-    let favoriteEvents: [Event]
-    let toggleFavorite: (Event) -> Void
+    let favoriteEvents: [Event] //array of Event objects
+    let toggleFavorite: (Event) -> Void //toggle to unfavorite, passed as closure bc need to connect to other parts of app
 
     var body: some View {
         VStack {
-            if favoriteEvents.isEmpty {
+            if favoriteEvents.isEmpty { //if are no favorite events, empty
                 Text("No favorite events")
                     .font(.headline)
                     .foregroundColor(.secondary)
                     .padding()
             } else {
-                List(favoriteEvents) { event in
-                    EventRow(
-                        event: event,
-                        isFavorite: true,
-                        onFavoriteToggle: {
-                            toggleFavorite(event)  // unfavorite the event
-                        }
-                    )
+                List(favoriteEvents) { event in //otherwise display list of events
+                    EventRow(event: event, 
+                             isFavorite: true,
+                             onFavoriteToggle: {
+                            toggleFavorite(event)  // favorite/unfavorite the event
+                            })
                 }
                 .listStyle(PlainListStyle())
                 .navigationTitle("Favorite Events")

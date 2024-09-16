@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Foundation
 
 struct EventRow: View {
     let event: Event
@@ -14,7 +13,7 @@ struct EventRow: View {
     let onFavoriteToggle: () -> Void
 
     var body: some View {
-        HStack {
+        HStack { //puts event details and favorites button side by side
             VStack(alignment: .leading) {
                 Text(event.name)
                     .font(.headline)
@@ -25,26 +24,26 @@ struct EventRow: View {
                 Text("End: \(formatDate(from: event.endTime))")
             }
 
-            Spacer()
+            Spacer() //needed to make favorite button to far right of row
 
-            Button(action: onFavoriteToggle) {
-                Image(systemName: isFavorite ? "star.fill" : "star")
-                    .foregroundColor(isFavorite ? .yellow : .gray)
+            Button(action: onFavoriteToggle) { //when pressed, onFavorite toggle closure triggered
+                Image(systemName: isFavorite ? "star.fill" : "star") //fill in star if pressed
+                    .foregroundColor(isFavorite ? .yellow : .gray) //pressed will be yellow, otherwise gray
             }
             .buttonStyle(BorderlessButtonStyle())
         }
         .padding(.vertical)
     }
 
-    func formatDate(from date: Date) -> String {
+    //UNIX timestamp is # of secs from Jan 1 1970
+    func formatDate(from date: Date) -> String { //converts Date object to string
             let calendar = Calendar.current
             var components = calendar.dateComponents([.year, .month, .day, .hour, .minute], from: date)
             components.year = 2024 // Set the year to 2024
 
-            if let newDate = calendar.date(from: components) {
+            if let newDate = calendar.date(from: components) { //new Date object with modified date
                 let formatter = DateFormatter()
-                formatter.timeZone = TimeZone.current // ensures correct time zone
-                formatter.dateFormat = "MMM d, yyyy h:mm a"
+                formatter.dateFormat = "MMM d, yyyy h:mm a" //abbreviate month, day, year, hour, min, am/pm
                 return formatter.string(from: newDate)
             }
             return "Invalid date"

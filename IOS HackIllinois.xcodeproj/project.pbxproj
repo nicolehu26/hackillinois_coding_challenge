@@ -282,6 +282,9 @@
 				Base,
 			);
 			mainGroup = DAC0EE742C9758A90060389B;
+			packageReferences = (
+				DA1E2E262C98A7C30085E684 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */,
+			);
 			productRefGroup = DAC0EE7E2C9758A90060389B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -719,6 +722,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DA1E2E262C98A7C30085E684 /* XCRemoteSwiftPackageReference "google-maps-ios-utils" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googlemaps/google-maps-ios-utils";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = DAC0EE752C9758A90060389B /* Project object */;
 }
